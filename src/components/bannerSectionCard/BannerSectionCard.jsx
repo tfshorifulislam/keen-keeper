@@ -1,0 +1,26 @@
+import React from 'react';
+
+const BannerSectionCard = () => {
+    return (
+        <div className='grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 mt-10 mb:mt-20 mx-auto w-11/12'>
+            <div className='text-center py-8 px-3 bg-white shadow-lg'>
+                <p className='text-[#244D3F] mb-2 font-semibold text-3xl'>10</p>
+                <p className='text-[#64748B] text-lg'>Total Friends</p>
+            </div>
+            <div className='text-center py-8 px-3 bg-white shadow-lg'>
+                <p className='text-[#244D3F] mb-2 font-semibold text-3xl'>3</p>
+                <p className='text-[#64748B] text-lg'>On Track</p>
+            </div>
+            <div className='text-center py-8 px-3 bg-white shadow-lg'>
+                <p className='text-[#244D3F] mb-2 font-semibold text-3xl'>6</p>
+                <p className='text-[#64748B] text-lg'>Need Attention</p>
+            </div>
+            <div className='text-center py-8 px-3 bg-white shadow-lg'>
+                <p className='text-[#244D3F] mb-2 font-semibold text-3xl'>12</p>
+                <p className='text-[#64748B] text-lg'>Interactions This Month</p>
+            </div>
+        </div>
+    );
+};
+
+export default BannerSectionCard;
