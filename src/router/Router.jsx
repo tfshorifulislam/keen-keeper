@@ -1,14 +1,24 @@
 import { createBrowserRouter } from "react-router";
 import layout from "../layout/layout";
 import Home from '../pages/Home/Home'
+import Timeline from '../pages/Timeline/Timeline'
+import Stats from "../pages/Stats/Stats";
 export const router = createBrowserRouter([
     {
         path: '/',
         Component: layout,
         children: [
             {
-                path: '/',
+                index: '/',
                 element: <Home />
+            },
+            {
+                path: 'Timeline',
+                element: <Timeline />
+            },
+            {
+                path: 'Stats',
+                element: <Stats />
             }
         ]
     }

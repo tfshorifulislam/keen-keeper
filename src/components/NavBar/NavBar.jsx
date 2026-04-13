@@ -26,7 +26,7 @@ const NavBar = () => {
                         </li>
                         <li>
                             <NavLink
-                                className={({ isActive }) => isActive ? 'font-semibold text-white bg-[#244D3F] rounded-sm' : 'font-medium text-[#64748B]'} to={'/Stats'}> Stats
+                                className={({ isActive }) => isActive ? 'font-semibold text-white bg-[#244D3F] rounded-sm' : 'font-medium text-[#64748B]'} to={'Stats'}> Stats
                             </NavLink>
                         </li>
                     </ul>
@@ -50,7 +50,7 @@ const NavBar = () => {
                     </li>
                     <li>
                         <NavLink
-                            className={({ isActive }) => isActive ? 'font-semibold text-white bg-[#244D3F] rounded-sm' : 'font-medium text-[#64748B]'} to={'/State'}> Stats
+                            className={({ isActive }) => isActive ? 'font-semibold text-white bg-[#244D3F] rounded-sm' : 'font-medium text-[#64748B]'} to={'Stats'}> Stats
                         </NavLink>
                     </li>
                 </ul>
