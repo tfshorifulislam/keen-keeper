@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router';
 
+
 const NavBar = () => {
 
     return (
@@ -15,7 +16,7 @@ const NavBar = () => {
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-5 w-52 p-2 shadow space-y-3">
                         <li>
                             <NavLink
-                                className={({ isActive }) => isActive ? 'font-semibold text-white bg-[#244D3F] rounded-sm' : 'font-medium text-[#64748B]'} to={'/'}> Home
+                                className={({ isActive }) => isActive ? 'font-semibold text-white bg-[#244D3F] rounded-sm' : 'font-medium text-[#64748B]'} to={'/'}>  Home
                             </NavLink>
                         </li>
                         <li>
