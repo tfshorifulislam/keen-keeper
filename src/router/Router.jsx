@@ -4,6 +4,7 @@ import Home from '../pages/Home/Home'
 import Timeline from '../pages/Timeline/Timeline'
 import Stats from "../pages/Stats/Stats";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
+import FriendDetails from "../pages/FriendDetails/FriendDetails";
 export const router = createBrowserRouter([
     {
         path: '/',
@@ -12,6 +13,10 @@ export const router = createBrowserRouter([
             {
                 index: '/',
                 element: <Home />
+            },
+            {
+                path: 'Home/:id',
+                element: <FriendDetails />
             },
             {
                 path: 'Timeline',

@@ -1,11 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 const CreateFriendsCard = ({ friend }) => {
     const { picture, name, status, tags, days_since_contact } = friend
 
     return (
         <div>
-            <div className='cursor-pointer cardAnimate  bg-white rounded-lg shadow-sm p-6 flex justify-center items-center flex-col'>
+            <Link to={`/Home/${friend.id}`} className='cursor-pointer cardAnimate  bg-white rounded-lg shadow-sm p-6 flex justify-center items-center flex-col'>
                 <div >
                     <img className='rounded-full mb-3' src={picture} alt="" />
                 </div>
@@ -34,7 +35,7 @@ const CreateFriendsCard = ({ friend }) => {
                         <p>{status}</p>
                     </div>
                 </div>
-            </div>
+            </Link>
         </div>
     );
 };
