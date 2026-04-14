@@ -43,8 +43,8 @@ const FriendDetailsLayout = ({ expectedFriendDetails }) => {
                         {bio}
                     </p>
                     <div
-                    className='text-[#64748B] text-sm text-center wrap-anywhere flex flex-col lg:flex-row justify-center items-center'>
-                        <span>Preferred</span>
+                    className='text-[#64748B] text-sm text-center wrap-anywhere flex flex-col lg:flex-row justify-center items-center gap-1'>
+                        <span>Preferred :</span>
                         <p>
                             {email}
                         </p>
@@ -85,16 +85,17 @@ const FriendDetailsLayout = ({ expectedFriendDetails }) => {
                     <div className='flex justify-start'>
                         <p className='font-medium text-lg text-[#244D3F]'>Quick Check-In</p>
                     </div>
-                    <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
-                        <div className='text-lg flex justify-center items-center flex-col text-[#1F2937] p-5 md:p-10 space-y-2 bg-[#F8FAFC] rounded-lg'>
+                    <div className='grid grid-cols-1 md:grid-cols-3 gap-4 '>
+
+                        <div className='text-lg flex justify-center items-center flex-col text-[#1F2937] p-5 md:p-10 space-y-2 bg-[#F8FAFC] rounded-lg cursor-pointer cardAnimate'>
                             <BiPhoneCall className='text-2xl md:text-3xl lg:text-5xl' />
                             <p>Call</p>
                         </div>
-                        <div className='text-lg flex justify-center items-center flex-col text-[#1F2937] p-5 md:p-10 space-y-2 bg-[#F8FAFC] rounded-lg'>
+                        <div className='text-lg flex justify-center items-center flex-col text-[#1F2937] p-5 md:p-10 space-y-2 bg-[#F8FAFC] rounded-lg cursor-pointer cardAnimate'>
                             <LuMessageSquareMore className='text-2xl md:text-3xl lg:text-5xl' />
                             <p>Text</p>
                         </div>
-                        <div className='text-lg flex flex-col justify-center items-center text-[#1F2937] p-5 md:p-10 space-y-2 bg-[#F8FAFC] rounded-lg'>
+                        <div className='text-lg flex flex-col justify-center items-center text-[#1F2937] p-5 md:p-10 space-y-2 bg-[#F8FAFC] rounded-lg cursor-pointer cardAnimate'>
                             <IoVideocamOutline className='text-2xl md:text-3xl lg:text-5xl' />
                             <p>Video</p>
                         </div>
@@ -108,13 +109,13 @@ const FriendDetailsLayout = ({ expectedFriendDetails }) => {
                         Snooze 2 weeks
                     </p>
                 </div>
-                <div className='col-span-2 bg-white flex gap-2 justify-center items-center py-4 shadow-sm'>
+                <div className='col-span-2 bg-white flex gap-2 justify-center items-center py-4 shadow-sm rounded-lg'>
                     <HiOutlineArchive />
                     <p className='font-medium text-[#1F2937]'>Archive</p>
                 </div>
-                <div className='col-span-2 bg-white flex gap-2 justify-center items-center py-4 shadow-sm'>
+                <div className='col-span-2 bg-white flex gap-2 justify-center items-center py-4 shadow-sm text-red-600 rounded-lg'>
                     <RiDeleteBin6Line />
-                    <p className='font-medium text-[#1F2937]'>Delete</p>
+                    <p className='font-medium text-[#1F2937] text-red-600'>Delete</p>
                 </div>
             </div>
         </div>
