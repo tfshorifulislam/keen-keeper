@@ -1,13 +1,43 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { BiPhoneCall } from "react-icons/bi";
 import { LuMessageSquareMore } from "react-icons/lu";
 import { IoVideocamOutline } from "react-icons/io5";
 import { RiNotificationSnoozeLine } from "react-icons/ri";
 import { HiOutlineArchive } from "react-icons/hi";
 import { RiDeleteBin6Line } from "react-icons/ri";
+import { friendDataContext } from '../../../friendContext/FriendContext';
+
 
 const FriendDetailsLayout = ({ expectedFriendDetails }) => {
-    const { picture, name, bio, status, email, tags, days_since_contact, goal, next_due_date } = expectedFriendDetails;
+    const {
+        picture,
+        name,
+        bio,
+        status,
+        email,
+        tags,
+        days_since_contact,
+        goal, next_due_date } = expectedFriendDetails;
+
+
+
+    const { call, setCall, } = useContext(friendDataContext)
+
+
+    const handleCall = () => {
+        
+        const exist = call.find(i => i.id === expectedFriendDetails.id)
+        if (exist) {
+            alert('all ready exist')
+            return;
+        }
+        else {
+            setCall([...call, expectedFriendDetails])
+            alert('add successsfull')
+            console.log('tf')
+        }
+    }
+    console.log(setCall)
     return (
         <div className='w-11/12 mx-auto'>
             <div className='grid grid-cols-1 md:grid-cols-5 grid-rows-1 md:grid-rows-7 gap-3 lg:gap-6 mt-10 md:mt-20'>
@@ -43,7 +73,7 @@ const FriendDetailsLayout = ({ expectedFriendDetails }) => {
                         {bio}
                     </p>
                     <div
-                    className='text-[#64748B] text-sm text-center wrap-anywhere flex flex-col lg:flex-row justify-center items-center gap-1'>
+                        className='text-[#64748B] text-sm text-center wrap-anywhere flex flex-col lg:flex-row justify-center items-center gap-1'>
                         <span>Preferred :</span>
                         <p>
                             {email}
@@ -87,7 +117,9 @@ const FriendDetailsLayout = ({ expectedFriendDetails }) => {
                     </div>
                     <div className='grid grid-cols-1 md:grid-cols-3 gap-4 '>
 
-                        <div className='text-lg flex justify-center items-center flex-col text-[#1F2937] p-5 md:p-10 space-y-2 bg-[#F8FAFC] rounded-lg cursor-pointer cardAnimate'>
+                        <div
+                            onClick={() => handleCall()}
+                            className='text-lg flex justify-center items-center flex-col text-[#1F2937] p-5 md:p-10 space-y-2 bg-[#F8FAFC] rounded-lg cursor-pointer cardAnimate'>
                             <BiPhoneCall className='text-2xl md:text-3xl lg:text-4xl' />
                             <p>Call</p>
                         </div>
@@ -115,7 +147,7 @@ const FriendDetailsLayout = ({ expectedFriendDetails }) => {
                 </div>
                 <div className='col-span-2 bg-white flex gap-2 justify-center items-center py-4 shadow-sm text-red-600 rounded-lg'>
                     <RiDeleteBin6Line />
-                    <p className='font-medium text-[#1F2937] text-red-600'>Delete</p>
+                    <p className='font-medium  text-red-600'>Delete</p>
                 </div>
             </div>
         </div>

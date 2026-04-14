@@ -9,7 +9,7 @@ const FriendDetails = () => {
     const { id } = useParams()
     const { friendsData, loading } = useFetchFriendsData()
     const expectedFriendDetails = friendsData.find(f => String(f.id) === id)
-    console.log(expectedFriendDetails)
+   
 
     if (loading) {
         return <Spinner />
