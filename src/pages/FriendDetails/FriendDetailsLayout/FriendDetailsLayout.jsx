@@ -6,6 +6,7 @@ import { RiNotificationSnoozeLine } from "react-icons/ri";
 import { HiOutlineArchive } from "react-icons/hi";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { friendDataContext } from '../../../friendContext/FriendContext';
+import { toast } from 'react-toastify';
 
 
 const FriendDetailsLayout = ({ expectedFriendDetails }) => {
@@ -25,17 +26,14 @@ const FriendDetailsLayout = ({ expectedFriendDetails }) => {
 
 
     const handleCall = () => {
-        
         const exist = call.find(i => i.id === expectedFriendDetails.id)
         if (exist) {
-            alert('all ready exist')
+            toast.error('all ready exist')
             return;
         }
-        else {
-            setCall([...call, expectedFriendDetails])
-            alert('add successsfull')
-            console.log('tf')
-        }
+        setCall([...call, expectedFriendDetails])
+        toast.success('add successful')
+        
     }
     console.log(setCall)
     return (
