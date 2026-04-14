@@ -1,2 +1,13 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+.cardAnimate {
+    transition: 0.3s ease;
+    transform: translateY(0);
+    filter: brightness(1);
+}
+
+.cardAnimate:hover {
+    transform: translateY(-12px);
+    filter: brightness(0.9);
+}
