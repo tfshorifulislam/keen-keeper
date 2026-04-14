@@ -3,6 +3,7 @@ import layout from "../layout/layout";
 import Home from '../pages/Home/Home'
 import Timeline from '../pages/Timeline/Timeline'
 import Stats from "../pages/Stats/Stats";
+import ErrorPage from "../pages/ErrorPage/ErrorPage";
 export const router = createBrowserRouter([
     {
         path: '/',
@@ -20,6 +21,7 @@ export const router = createBrowserRouter([
                 path: 'Stats',
                 element: <Stats />
             }
-        ]
+        ],
+        errorElement: <ErrorPage />
     }
 ])
