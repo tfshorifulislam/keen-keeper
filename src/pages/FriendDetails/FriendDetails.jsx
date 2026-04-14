@@ -12,18 +12,18 @@ const FriendDetails = () => {
     console.log(expectedFriendDetails)
 
     if (loading) {
-        <Spinner />
+        return <Spinner />
     }
 
-    if(!expectedFriendDetails){
-        <ErrorPage />
-        return;
+    if (!expectedFriendDetails) {
+        return <ErrorPage />
     }
 
     return (
         <div className='w-11/12 mx-auto'>
             <FriendDetailsLayout expectedFriendDetails={expectedFriendDetails} />
         </div>
+
     );
 };
 
