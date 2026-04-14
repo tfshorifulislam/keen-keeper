@@ -27,15 +27,24 @@ const FriendDetailsLayout = ({ expectedFriendDetails }) => {
 
     const handleCall = () => {
         const exist = call.find(i => i.id === expectedFriendDetails.id)
-        if (exist) {
-            toast.error('all ready exist')
-            return;
-        }
         setCall([...call, expectedFriendDetails])
         toast.success('add successful')
-        
+
     }
-    console.log(setCall)
+
+    const handleText = () => {
+        const exist = call.find(i => i.id === expectedFriendDetails.id)
+        setCall([...call, expectedFriendDetails])
+        toast.success('add successful')
+
+    }
+    const handleVideo = () => {
+        const exist = call.find(i => i.id === expectedFriendDetails.id)
+        setCall([...call, expectedFriendDetails])
+        toast.success('add successful')
+
+    }
+
     return (
         <div className='w-11/12 mx-auto'>
             <div className='grid grid-cols-1 md:grid-cols-5 grid-rows-1 md:grid-rows-7 gap-3 lg:gap-6 mt-10 md:mt-20'>
@@ -121,11 +130,15 @@ const FriendDetailsLayout = ({ expectedFriendDetails }) => {
                             <BiPhoneCall className='text-2xl md:text-3xl lg:text-4xl' />
                             <p>Call</p>
                         </div>
-                        <div className='text-lg flex justify-center items-center flex-col text-[#1F2937] p-5 md:p-10 space-y-2 bg-[#F8FAFC] rounded-lg cursor-pointer cardAnimate'>
+                        <div
+                            onClick={() => handleText()}
+                            className='text-lg flex justify-center items-center flex-col text-[#1F2937] p-5 md:p-10 space-y-2 bg-[#F8FAFC] rounded-lg cursor-pointer cardAnimate'>
                             <LuMessageSquareMore className='text-2xl md:text-3xl lg:text-4xl' />
                             <p>Text</p>
                         </div>
-                        <div className='text-lg flex flex-col justify-center items-center text-[#1F2937] p-5 md:p-10 space-y-2 bg-[#F8FAFC] rounded-lg cursor-pointer cardAnimate'>
+                        <div
+                            onClick={() => handleVideo()}
+                            className='text-lg flex flex-col justify-center items-center text-[#1F2937] p-5 md:p-10 space-y-2 bg-[#F8FAFC] rounded-lg cursor-pointer cardAnimate'>
                             <IoVideocamOutline className='text-2xl md:text-3xl lg:text-4xl' />
                             <p>Video</p>
                         </div>
