@@ -39,7 +39,7 @@ const FriendDetailsLayout = ({ expectedFriendDetails }) => {
                         </div>
                     </div>
                     <p
-                        className='text-[#64748B] font-normal md:font-medium text-center text-sm lg:text-lg '>
+                        className='text-[#64748B] font-normal md:font-medium text-center text-sm '>
                         {bio}
                     </p>
                     <div
@@ -52,15 +52,15 @@ const FriendDetailsLayout = ({ expectedFriendDetails }) => {
                 </div>
 
                 <div className='col-span-2 md:col-span-1 row-span-2  bg-white py-8 rounded-lg flex flex-col justify-center items-center space-y-2 shadow-sm px-1'>
-                    <p className='font-semibold text-[#244D3F] text-lg lg:text-3xl'>{days_since_contact}</p>
+                    <p className='font-semibold text-[#244D3F] text-lg lg:text-2xl'>{days_since_contact}</p>
                     <p className='text-[#64748B] text-sm lg:text-lg text-center '>Days Since Contact</p>
                 </div>
                 <div className='col-span-2 md:col-span-1 row-span-2 bg-white py-8 rounded-lg flex flex-col justify-center items-center space-y-2 shadow-sm px-1'>
-                    <p className='font-semibold text-[#244D3F] text-lg lg:text-3xl'>{goal}</p>
+                    <p className='font-semibold text-[#244D3F] text-lg lg:text-2xl'>{goal}</p>
                     <p className='text-[#64748B] text-sm lg:text-lg '>Goal (Days)</p>
                 </div>
                 <div className='col-span-2 md:col-span-1 row-span-2 bg-white py-8 rounded-lg flex flex-col justify-center items-center space-y-2 px-1 shadow-sm'>
-                    <p className='font-semibold text-[#244D3F] text-lg  lg:text-3xl'>{next_due_date}</p>
+                    <p className='font-semibold text-[#244D3F] text-lg  lg:text-2xl'>{next_due_date}</p>
                     <p className='text-[#64748B] text-sm lg:text-lg '>Next Due</p>
                 </div>
                 <div className='col-span-2 md:col-span-3 row-span-2 p-6 space-y-4 bg-white shadow-sm rounded-lg'>
@@ -88,15 +88,15 @@ const FriendDetailsLayout = ({ expectedFriendDetails }) => {
                     <div className='grid grid-cols-1 md:grid-cols-3 gap-4 '>
 
                         <div className='text-lg flex justify-center items-center flex-col text-[#1F2937] p-5 md:p-10 space-y-2 bg-[#F8FAFC] rounded-lg cursor-pointer cardAnimate'>
-                            <BiPhoneCall className='text-2xl md:text-3xl lg:text-5xl' />
+                            <BiPhoneCall className='text-2xl md:text-3xl lg:text-4xl' />
                             <p>Call</p>
                         </div>
                         <div className='text-lg flex justify-center items-center flex-col text-[#1F2937] p-5 md:p-10 space-y-2 bg-[#F8FAFC] rounded-lg cursor-pointer cardAnimate'>
-                            <LuMessageSquareMore className='text-2xl md:text-3xl lg:text-5xl' />
+                            <LuMessageSquareMore className='text-2xl md:text-3xl lg:text-4xl' />
                             <p>Text</p>
                         </div>
                         <div className='text-lg flex flex-col justify-center items-center text-[#1F2937] p-5 md:p-10 space-y-2 bg-[#F8FAFC] rounded-lg cursor-pointer cardAnimate'>
-                            <IoVideocamOutline className='text-2xl md:text-3xl lg:text-5xl' />
+                            <IoVideocamOutline className='text-2xl md:text-3xl lg:text-4xl' />
                             <p>Video</p>
                         </div>
                     </div>
