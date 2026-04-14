@@ -1,0 +1,122 @@
+[
+    {
+        "id": 1,
+        "name": "Arafat Rahman",
+        "picture": "https://randomuser.me/api/portraits/men/32.jpg",
+        "email": "arafat.rahman@gmail.com",
+        "days_since_contact": 18,
+        "status": "overdue",
+        "tags": [
+            "college",
+            "close friend"
+        ],
+        "bio": "We studied Computer Science together. Always talks about startups and tech trends.",
+        "goal": 14,
+        "next_due_date": "2025-07-10"
+    },
+    {
+        "id": 2,
+        "name": "Nusrat Jahan",
+        "picture": "https://randomuser.me/api/portraits/women/44.jpg",
+        "email": "nusrat.jahan@gmail.com",
+        "days_since_contact": 6,
+        "status": "on-track",
+        "tags": [
+            "office",
+            "design"
+        ],
+        "bio": "Colleague from my first job. Creative designer who loves coffee and photography.",
+        "goal": 10,
+        "next_due_date": "2025-07-22"
+    },
+    {
+        "id": 3,
+        "name": "Imran Hossain",
+        "picture": "https://randomuser.me/api/portraits/men/51.jpg",
+        "email": "imran.hossain@yahoo.com",
+        "days_since_contact": 13,
+        "status": "almost due",
+        "tags": [
+            "gym",
+            "fitness"
+        ],
+        "bio": "Met at the gym. Keeps me motivated with workouts and diet plans.",
+        "goal": 14,
+        "next_due_date": "2025-07-19"
+    },
+    {
+        "id": 4,
+        "name": "Sarah Ahmed",
+        "picture": "https://randomuser.me/api/portraits/women/68.jpg",
+        "email": "sarah.ahmed@hotmail.com",
+        "days_since_contact": 25,
+        "status": "overdue",
+        "tags": [
+            "school",
+            "travel"
+        ],
+        "bio": "School friend who now travels frequently. Always shares amazing travel stories.",
+        "goal": 20,
+        "next_due_date": "2025-07-05"
+    },
+    {
+        "id": 5,
+        "name": "Rakib Hasan",
+        "picture": "https://randomuser.me/api/portraits/men/76.jpg",
+        "email": "rakib.hasan@gmail.com",
+        "days_since_contact": 3,
+        "status": "on-track",
+        "tags": [
+            "neighbor",
+            "gaming"
+        ],
+        "bio": "Neighbor and gaming buddy. We often play online multiplayer games at night.",
+        "goal": 7,
+        "next_due_date": "2025-07-25"
+    },
+    {
+        "id": 6,
+        "name": "Farzana Kabir",
+        "picture": "https://randomuser.me/api/portraits/women/12.jpg",
+        "email": "farzana.kabir@gmail.com",
+        "days_since_contact": 11,
+        "status": "almost due",
+        "tags": [
+            "university",
+            "study group"
+        ],
+        "bio": "Used to study together before exams. Very organized and helpful.",
+        "goal": 12,
+        "next_due_date": "2025-07-18"
+    },
+    {
+        "id": 7,
+        "name": "Tanvir Alam",
+        "picture": "https://randomuser.me/api/portraits/men/29.jpg",
+        "email": "tanvir.alam@gmail.com",
+        "days_since_contact": 20,
+        "status": "overdue",
+        "tags": [
+            "startup",
+            "networking"
+        ],
+        "bio": "Met at a tech meetup. Always discussing business ideas and opportunities.",
+        "goal": 15,
+        "next_due_date": "2025-07-08"
+    },
+    {
+        "id": 8,
+        "name": "Maliha Chowdhury",
+        "picture": "https://randomuser.me/api/portraits/women/23.jpg",
+        "email": "maliha.chowdhury@gmail.com",
+        "days_since_contact": 8,
+        "status": "on-track",
+        "tags": [
+            "family friend",
+            "events"
+        ],
+        "bio": "Family friend who organizes events and loves social gatherings.",
+        "goal": 10,
+        "next_due_date": "2025-07-21"
+    }
+]
