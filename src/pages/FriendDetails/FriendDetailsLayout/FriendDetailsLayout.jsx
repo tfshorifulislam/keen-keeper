@@ -4,7 +4,7 @@ const FriendDetailsLayout = ({ expectedFriendDetails }) => {
     const { picture, name, bio, status, email, tags, days_since_contact, goal, next_due_date } = expectedFriendDetails;
     return (
         <div>
-            <div className='grid grid-cols-1 sm:grid-cols-5 grid-rows-1 md:grid-rows-7 gap-6 mt-10 md:mt-20'>
+            <div className='grid grid-cols-1 md:grid-cols-5 grid-rows-1 md:grid-rows-7 gap-6 mt-10 md:mt-20 text-center'>
                 <div className='bg-white rounded-lg col-span-2 row-span-4 flex flex-col justify-center space-y-3 py-6 px-2 shadow-sm'>
                     <div className='flex justify-center'>
                         <img className='rounded-full' src={picture} alt={name} />
@@ -36,15 +36,15 @@ const FriendDetailsLayout = ({ expectedFriendDetails }) => {
                     <p className='text-[#64748B] text-sm text-center'>Preferred:{email}</p>
                 </div>
 
-                <div className='bg-white py-8 rounded-lg text-center space-y-2 shadow-sm'>
+                <div className='col-span-2 md:col-span-1 row-span-2  bg-white py-8 rounded-lg flex flex-col justify-center items-center space-y-2 shadow-sm px-1'>
                     <p className='font-semibold text-[#244D3F] text-2xl md:text-3xl'>{days_since_contact}</p>
                     <p className='text-[#64748B] text-lg'>Days Since Contact</p>
                 </div>
-                <div className='bg-white py-8 rounded-lg text-center space-y-2 shadow-sm'>
+                <div className='col-span-2 md:col-span-1 row-span-2 bg-white py-8 rounded-lg flex flex-col justify-center items-center space-y-2 shadow-sm px-1'>
                     <p className='font-semibold text-[#244D3F] text-2xl md:text-3xl'>{goal}</p>
                     <p className='text-[#64748B] text-lg'>Goal (Days)</p>
                 </div>
-                <div className='bg-white py-8 rounded-lg text-center space-y-2 shadow-sm'>
+                <div className='col-span-2 md:col-span-1 row-span-2 bg-white py-8 rounded-lg flex flex-col justify-center items-center space-y-2 shadow-sm px-1'>
                     <p className='font-semibold text-[#244D3F] text-2xl md:text-3xl'>{next_due_date}</p>
                     <p className='text-[#64748B] text-lg'>Next Due</p>
                 </div>
