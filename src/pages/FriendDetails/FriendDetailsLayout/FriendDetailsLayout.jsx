@@ -1,10 +1,16 @@
 import React from 'react';
+import { BiPhoneCall } from "react-icons/bi";
+import { LuMessageSquareMore } from "react-icons/lu";
+import { IoVideocamOutline } from "react-icons/io5";
+import { RiNotificationSnoozeLine } from "react-icons/ri";
+import { HiOutlineArchive } from "react-icons/hi";
+import { RiDeleteBin6Line } from "react-icons/ri";
 
 const FriendDetailsLayout = ({ expectedFriendDetails }) => {
     const { picture, name, bio, status, email, tags, days_since_contact, goal, next_due_date } = expectedFriendDetails;
     return (
-        <div>
-            <div className='grid grid-cols-1 md:grid-cols-5 grid-rows-1 md:grid-rows-7 gap-6 mt-10 md:mt-20'>
+        <div className='w-11/12 mx-auto'>
+            <div className='grid grid-cols-1 md:grid-cols-5 grid-rows-1 md:grid-rows-7 gap-3 lg:gap-6 mt-10 md:mt-20'>
                 <div className='bg-white rounded-lg col-span-2 row-span-4 flex flex-col justify-center space-y-3 py-6 px-2 shadow-sm'>
                     <div className='flex justify-center'>
                         <img className='rounded-full' src={picture} alt={name} />
@@ -32,24 +38,33 @@ const FriendDetailsLayout = ({ expectedFriendDetails }) => {
                             </div>
                         </div>
                     </div>
-                    <p className='text-[#64748B] font-medium text-center'>{bio}</p>
-                    <p className='text-[#64748B] text-sm text-center'>Preferred:{email}</p>
+                    <p
+                        className='text-[#64748B] font-normal md:font-medium text-center text-sm lg:text-lg '>
+                        {bio}
+                    </p>
+                    <div
+                    className='text-[#64748B] text-sm text-center wrap-anywhere flex flex-col lg:flex-row justify-center items-center'>
+                        <span>Preferred</span>
+                        <p>
+                            {email}
+                        </p>
+                    </div>
                 </div>
 
                 <div className='col-span-2 md:col-span-1 row-span-2  bg-white py-8 rounded-lg flex flex-col justify-center items-center space-y-2 shadow-sm px-1'>
-                    <p className='font-semibold text-[#244D3F] text-2xl md:text-3xl'>{days_since_contact}</p>
-                    <p className='text-[#64748B] text-lg'>Days Since Contact</p>
+                    <p className='font-semibold text-[#244D3F] text-lg lg:text-3xl'>{days_since_contact}</p>
+                    <p className='text-[#64748B] text-sm lg:text-lg text-center '>Days Since Contact</p>
                 </div>
                 <div className='col-span-2 md:col-span-1 row-span-2 bg-white py-8 rounded-lg flex flex-col justify-center items-center space-y-2 shadow-sm px-1'>
-                    <p className='font-semibold text-[#244D3F] text-2xl md:text-3xl'>{goal}</p>
-                    <p className='text-[#64748B] text-lg'>Goal (Days)</p>
+                    <p className='font-semibold text-[#244D3F] text-lg lg:text-3xl'>{goal}</p>
+                    <p className='text-[#64748B] text-sm lg:text-lg '>Goal (Days)</p>
                 </div>
                 <div className='col-span-2 md:col-span-1 row-span-2 bg-white py-8 rounded-lg flex flex-col justify-center items-center space-y-2 px-1 shadow-sm'>
-                    <p className='font-semibold text-[#244D3F] text-2xl md:text-3xl'>{next_due_date}</p>
-                    <p className='text-[#64748B] text-lg'>Next Due</p>
+                    <p className='font-semibold text-[#244D3F] text-lg  lg:text-3xl'>{next_due_date}</p>
+                    <p className='text-[#64748B] text-sm lg:text-lg '>Next Due</p>
                 </div>
                 <div className='col-span-2 md:col-span-3 row-span-2 p-6 space-y-4 bg-white shadow-sm rounded-lg'>
-                    <span className='flex justify-between'>
+                    <span className='flex flex-col space-y-2 md:flex-row justify-between'>
                         <p className='font-medium text-lg text-[#244D3F]'>
                             Relationship Goal
                         </p>
@@ -59,33 +74,46 @@ const FriendDetailsLayout = ({ expectedFriendDetails }) => {
                         <p className='text-[#64748B] text-lg'>Connect every <span className='text-[#1F2937] font-bold text-lg'>{days_since_contact} days</span> </p>
                     </div>
                 </div>
-                <div className='col-span-2 bg-white md:flex justify-center items-center py-4 shadow-sm rounded-lg hidden'>
-                    <p className='font-medium text-[#1F2937]'>Snooze 2 weeks</p>
+                <div className='col-span-2 bg-white md:flex gap-2 justify-center items-center py-4 shadow-sm rounded-lg hidden'>
+                    <RiNotificationSnoozeLine />
+                    <p
+                        className='font-medium text-[#1F2937] '>
+                        Snooze 2 weeks
+                    </p>
                 </div>
-                <div className='col-span-3 row-span-3 bg-white  space-y-4 p-6 rounded-lg'>
+                <div className='col-span-2 md:col-span-3 row-span-3 bg-white  space-y-4 p-6 rounded-lg'>
                     <div className='flex justify-start'>
                         <p className='font-medium text-lg text-[#244D3F]'>Quick Check-In</p>
                     </div>
                     <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
-                        <div className='text-lg flex justify-center items-center text-[#1F2937] p-4 space-y-2 bg-[#F8FAFC] rounded-lg'>
+                        <div className='text-lg flex justify-center items-center flex-col text-[#1F2937] p-5 md:p-10 space-y-2 bg-[#F8FAFC] rounded-lg'>
+                            <BiPhoneCall className='text-2xl md:text-3xl lg:text-5xl' />
                             <p>Call</p>
                         </div>
-                        <div className='text-lg flex justify-center items-center text-[#1F2937] p-4 space-y-2 bg-[#F8FAFC] rounded-lg'>
+                        <div className='text-lg flex justify-center items-center flex-col text-[#1F2937] p-5 md:p-10 space-y-2 bg-[#F8FAFC] rounded-lg'>
+                            <LuMessageSquareMore className='text-2xl md:text-3xl lg:text-5xl' />
                             <p>Text</p>
                         </div>
-                        <div className='text-lg flex justify-center items-center text-[#1F2937] p-4 space-y-2 bg-[#F8FAFC] rounded-lg'>
+                        <div className='text-lg flex flex-col justify-center items-center text-[#1F2937] p-5 md:p-10 space-y-2 bg-[#F8FAFC] rounded-lg'>
+                            <IoVideocamOutline className='text-2xl md:text-3xl lg:text-5xl' />
                             <p>Video</p>
                         </div>
                     </div>
                 </div>
-                {/* extra btn for mobaile responsive */}
-                <div className='col-span-2 bg-white flex justify-center items-center py-4 shadow-sm rounded-lg md:hidden'>
-                    <p className='font-medium text-[#1F2937]'>Snooze 2 weeks</p>
+                {/* extra btn for mobile responsive */}
+                <div className='col-span-2 bg-white flex gap-2 justify-center items-center py-4 shadow-sm rounded-lg md:hidden'>
+                    <RiNotificationSnoozeLine />
+                    <p
+                        className='font-medium text-[#1F2937]'>
+                        Snooze 2 weeks
+                    </p>
                 </div>
-                <div className='col-span-2 bg-white flex justify-center items-center py-4 shadow-sm'>
+                <div className='col-span-2 bg-white flex gap-2 justify-center items-center py-4 shadow-sm'>
+                    <HiOutlineArchive />
                     <p className='font-medium text-[#1F2937]'>Archive</p>
                 </div>
-                <div className='col-span-2 bg-white flex justify-center items-center py-4 shadow-sm'>
+                <div className='col-span-2 bg-white flex gap-2 justify-center items-center py-4 shadow-sm'>
+                    <RiDeleteBin6Line />
                     <p className='font-medium text-[#1F2937]'>Delete</p>
                 </div>
             </div>
