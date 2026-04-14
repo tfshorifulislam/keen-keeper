@@ -6,11 +6,11 @@ import FriendDetailsLayout from './FriendDetailsLayout/FriendDetailsLayout';
 const FriendDetails = () => {
     const { id } = useParams()
     const { friendsData, loading } = useFetchFriendsData()
-    const expectedFriendDetails = friendsData.filter(f => String(f.id) === id)
+    const expectedFriendDetails = friendsData.find(f => String(f.id) === id)
     console.log(expectedFriendDetails)
     return (
         <div>
-            <FriendDetailsLayout friendsData={friendsData} />
+            <FriendDetailsLayout expectedFriendDetails={expectedFriendDetails} />
         </div>
     );
 };
