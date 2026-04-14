@@ -48,6 +48,17 @@ const FriendDetailsLayout = ({ expectedFriendDetails }) => {
                     <p className='font-semibold text-[#244D3F] text-2xl md:text-3xl'>{next_due_date}</p>
                     <p className='text-[#64748B] text-lg'>Next Due</p>
                 </div>
+                <div className='col-span-2 md:col-span-3 row-span-2 p-6 space-y-4 bg-white'>
+                    <span className='flex justify-between'>
+                        <p className='font-medium text-lg text-[#244D3F]'>
+                            Relationship Goal
+                        </p>
+                        <button className='btn text-[#1F2937] font-medium text-sm'>Edit</button>
+                    </span>
+                    <div className='flex justify-start'>
+                        <p className='text-[#64748B] text-lg'>Connect every <span className='text-[#1F2937] font-bold text-lg'>{days_since_contact} days</span> </p>
+                    </div>
+                </div>
             </div>
         </div>
     );
