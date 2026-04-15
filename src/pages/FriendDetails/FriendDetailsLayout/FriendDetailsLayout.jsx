@@ -27,21 +27,21 @@ const FriendDetailsLayout = ({ expectedFriendDetails }) => {
 
     const handleCall = () => {
         const exist = call.find(i => i.id === expectedFriendDetails.id)
-        setCall([...call, expectedFriendDetails])
-        toast.success('add successful')
+        setCall([expectedFriendDetails, ...call])
+        toast.success(`${expectedFriendDetails.name} is Ringing`)
 
     }
 
     const handleText = () => {
         const exist = call.find(i => i.id === expectedFriendDetails.id)
-        setCall([...call, expectedFriendDetails])
-        toast.success('add successful')
+        setCall([expectedFriendDetails, ...call])
+        toast.success(`${expectedFriendDetails.name} sent text successful`)
 
     }
     const handleVideo = () => {
         const exist = call.find(i => i.id === expectedFriendDetails.id)
-        setCall([...call, expectedFriendDetails])
-        toast.success('add successful')
+        setCall([expectedFriendDetails, ...call])
+        toast.success(`${expectedFriendDetails.name} is video call `)
 
     }
 
