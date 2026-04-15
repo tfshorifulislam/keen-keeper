@@ -22,7 +22,7 @@ const FriendDetailsLayout = ({ expectedFriendDetails }) => {
 
 
 
-    const { call, setCall, } = useContext(friendDataContext)
+    const { call, setCall, text, setText, video, setVideo } = useContext(friendDataContext)
 
 
     const handleCall = () => {
@@ -33,14 +33,14 @@ const FriendDetailsLayout = ({ expectedFriendDetails }) => {
     }
 
     const handleText = () => {
-        const exist = call.find(i => i.id === expectedFriendDetails.id)
-        setCall([expectedFriendDetails, ...call])
+        const exist = text.find(i => i.id === expectedFriendDetails.id)
+        setText([expectedFriendDetails, ...text])
         toast.success(`${expectedFriendDetails.name} sent text successful`)
 
     }
     const handleVideo = () => {
-        const exist = call.find(i => i.id === expectedFriendDetails.id)
-        setCall([expectedFriendDetails, ...call])
+        const exist = video.find(i => i.id === expectedFriendDetails.id)
+        setVideo([expectedFriendDetails, ...video])
         toast.success(`${expectedFriendDetails.name} is video call `)
 
     }
