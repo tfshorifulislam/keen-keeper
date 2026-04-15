@@ -1,12 +1,12 @@
 import React from 'react';
-import text from '../../assets/text.png'
+import call from '../../assets/call.png'
 const TimelineCard = ({ i }) => {
     return (
         <div >
             <div className='space-y-6'>
                 <div className='p-4 bg-white border border-[#E9E9E9] flex items-center gap-4 rounded-lg'>
                     <div>
-                        <img src={text} alt="" />
+                        <img src={call} alt="" />
                     </div>
                     <div>
                         <p className='text-[#244D3F] font-medium text-xl'>
