@@ -16,7 +16,7 @@ const CreateFriendsCard = ({ friend }) => {
                     </div>
                     <div className='text-[#64748B] text-[12px]'>
                         <h1>
-                            {days_since_contact} 
+                            {days_since_contact}d 
                             <span className='ml-2'>ago</span>
                         </h1>
                     </div>

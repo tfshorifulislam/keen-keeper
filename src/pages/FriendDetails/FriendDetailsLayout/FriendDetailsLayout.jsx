@@ -23,11 +23,10 @@ const FriendDetailsLayout = ({ expectedFriendDetails }) => {
     const { call, setCall } = useContext(friendDataContext)
 
     const handleAction = (type) => {
-        // const exist = call.find(i => i.id === expectedFriendDetails.id)
-        // console.log(exist)
+        
         const newItem = { ...expectedFriendDetails, type }
         setCall([newItem, ...call])
-        toast.success(`${expectedFriendDetails.name} is Ringing`)
+        toast.success(`${expectedFriendDetails.name} is Successful`)
 
     }
 
