@@ -20,28 +20,14 @@ const FriendDetailsLayout = ({ expectedFriendDetails }) => {
         days_since_contact,
         goal, next_due_date } = expectedFriendDetails;
 
+    const { call, setCall } = useContext(friendDataContext)
 
-
-    const { call, setCall, text, setText, video, setVideo } = useContext(friendDataContext)
-
-
-    const handleCall = () => {
-        const exist = call.find(i => i.id === expectedFriendDetails.id)
-        setCall([expectedFriendDetails, ...call])
+    const handleAction = (type) => {
+        // const exist = call.find(i => i.id === expectedFriendDetails.id)
+        // console.log(exist)
+        const newItem = { ...expectedFriendDetails, type }
+        setCall([newItem, ...call])
         toast.success(`${expectedFriendDetails.name} is Ringing`)
-
-    }
-
-    const handleText = () => {
-        const exist = text.find(i => i.id === expectedFriendDetails.id)
-        setText([expectedFriendDetails, ...text])
-        toast.success(`${expectedFriendDetails.name} sent text successful`)
-
-    }
-    const handleVideo = () => {
-        const exist = video.find(i => i.id === expectedFriendDetails.id)
-        setVideo([expectedFriendDetails, ...video])
-        toast.success(`${expectedFriendDetails.name} is video call `)
 
     }
 
@@ -125,19 +111,19 @@ const FriendDetailsLayout = ({ expectedFriendDetails }) => {
                     <div className='grid grid-cols-1 md:grid-cols-3 gap-4 '>
 
                         <div
-                            onClick={() => handleCall()}
+                            onClick={() => handleAction('call')}
                             className='text-lg flex justify-center items-center flex-col text-[#1F2937] p-5 md:p-10 space-y-2 bg-[#F8FAFC] rounded-lg cursor-pointer cardAnimate'>
                             <BiPhoneCall className='text-2xl md:text-3xl lg:text-4xl' />
                             <p>Call</p>
                         </div>
                         <div
-                            onClick={() => handleText()}
+                            onClick={() => handleAction('text')}
                             className='text-lg flex justify-center items-center flex-col text-[#1F2937] p-5 md:p-10 space-y-2 bg-[#F8FAFC] rounded-lg cursor-pointer cardAnimate'>
                             <LuMessageSquareMore className='text-2xl md:text-3xl lg:text-4xl' />
                             <p>Text</p>
                         </div>
                         <div
-                            onClick={() => handleVideo()}
+                            onClick={() => handleAction('video')}
                             className='text-lg flex flex-col justify-center items-center text-[#1F2937] p-5 md:p-10 space-y-2 bg-[#F8FAFC] rounded-lg cursor-pointer cardAnimate'>
                             <IoVideocamOutline className='text-2xl md:text-3xl lg:text-4xl' />
                             <p>Video</p>

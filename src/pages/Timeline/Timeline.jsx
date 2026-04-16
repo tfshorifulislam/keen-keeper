@@ -2,13 +2,12 @@ import React, { useContext } from 'react';
 import { friendDataContext } from '../../friendContext/FriendContext';
 import TimelineCard from '../../components/timelineCard/TimelineCard';
 import { IoIosArrowDown } from 'react-icons/io';
-import TimelineTextCard from '../../components/timelineCard/timelineTextCard/TimelineTextCard';
-import TimelineVideoCard from '../../components/timelineCard/timelineVideoCard/timelineVideoCard';
+
 
 
 const Timeline = () => {
-    const { call, text, video } = useContext(friendDataContext)
-    console.log(call)
+    const { call } = useContext(friendDataContext)
+    
     return (
         <div className='w-11/12 mx-auto my-20 space-y-3 md:space-y-6'>
             <p className='text-2xl md:text-4xl font-bold text-[#1F2937]'>
@@ -28,12 +27,6 @@ const Timeline = () => {
             </div>
             {
                 call.map(i => <TimelineCard key={i.id} i={i} />)
-            }
-            {
-                text.map(i => <TimelineTextCard key={i.id} i={i} />)
-            }
-            {
-                video.map(i => <TimelineVideoCard key={i.id} i={i} />)
             }
 
         </div>
